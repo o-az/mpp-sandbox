@@ -1,5 +1,12 @@
 {
+  "$schema": "https://esm.sh/wrangler/config-schema.json",
   "name": "mpp",
+  "keep_vars": true,
+  "workers_dev": true,
+  "preview_urls": true,
+  "observability": {
+    "enabled": true
+  },
   "main": "src/index.tsx",
   "compatibility_date": "2026-02-23",
   "compatibility_flags": ["nodejs_compat"],

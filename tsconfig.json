@@ -28,7 +28,7 @@
     "noFallthroughCasesInSwitch": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
-    "types": ["@cloudflare/workers-types", "typed-query-selector/strict"]
+    "types": ["vite/client", "@cloudflare/workers-types", "typed-query-selector/strict"]
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "files": ["vite.config.ts", "oxfmt.config.ts", "oxlint.config.ts", "worker-configuration.d.ts"]
