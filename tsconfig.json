@@ -1,17 +1,23 @@
 {
   "schema": "https://json.schemastore.org/tsconfig.json",
   "compilerOptions": {
-    "target": "ES2024",
-    "module": "ESNext",
     "strict": true,
     "noEmit": true,
-    "esModuleInterop": true,
+    "allowJs": true,
+    "checkJs": true,
+    "lib": ["DOM", "ESNext", "DOM.Iterable"],
+    "target": "ESNext",
+    "module": "ESNext",
     "skipLibCheck": true,
-    "moduleResolution": "bundler",
     "alwaysStrict": true,
+    "esModuleInterop": true,
     "isolatedModules": true,
     "strictNullChecks": true,
     "resolveJsonModule": true,
+    "verbatimModuleSyntax": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "hono/jsx",
+    "moduleResolution": "Bundler",
     "useDefineForClassFields": true,
     "allowArbitraryExtensions": true,
     "noUncheckedIndexedAccess": true,
@@ -22,16 +28,8 @@
     "noFallthroughCasesInSwitch": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
-    "types": [
-      "@cloudflare/workers-types",
-      "typed-query-selector/strict"
-    ]
+    "types": ["@cloudflare/workers-types", "typed-query-selector/strict"]
   },
-  "include": [
-    "src/**/*.ts"
-  ],
-  "files": [
-    "vite.config.ts",
-    "worker-configuration.d.ts"
-  ]
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "files": ["vite.config.ts", "oxfmt.config.ts", "oxlint.config.ts", "worker-configuration.d.ts"]
 }
