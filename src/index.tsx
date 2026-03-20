@@ -125,7 +125,11 @@ app.get(
             name='sandbox-id'
             content={userId}
           />
-          <title>MPP Sandbox — Try the Machine Payments Protocol</title>
+          <link
+            rel='icon'
+            href='https://tempo.xyz/favicon.ico'
+          />
+          <title>MPP Sandbox</title>
           <Style />
         </head>
         <body class={globalStyles}>
