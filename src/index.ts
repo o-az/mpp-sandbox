@@ -1,12 +1,5 @@
-/**
- * OpenCode + Sandbox SDK Example
- *
- * This example demonstrates both ways to use OpenCode with Sandbox:
- * 1. Web UI - Browse to / for the full OpenCode web experience
- * 2. Programmatic - POST to /api/test for SDK-based automation
- */
-import { getSandbox } from '@cloudflare/sandbox'
 import type { Part } from '@opencode-ai/sdk/v2'
+import { getSandbox } from '@cloudflare/sandbox'
 import type { OpencodeClient } from '@opencode-ai/sdk/v2/client'
 import { createOpencode, createOpencodeServer, proxyToOpencode } from '@cloudflare/sandbox/opencode'
 
@@ -30,9 +23,7 @@ export default {
     }
 
     // Everything else: Web UI proxy
-    const server = await createOpencodeServer(sandbox, {
-      // directory: '/home/user/agents',
-    })
+    const server = await createOpencodeServer(sandbox, {})
     return proxyToOpencode(request, sandbox, server)
   }
 }
