@@ -1,0 +1,26 @@
+diff --git a/dist/index.mjs b/dist/index.mjs
+index 01e71145d81179c7adf26c52bf5a1bcbd8675ead..10bc9c3122ab1f6a92c8f552bf276859ad54e3e0 100644
+--- a/dist/index.mjs
++++ b/dist/index.mjs
+@@ -23239,9 +23239,7 @@ function getEgressInterceptorImage() {
+ async function pullEgressInterceptorImage(dockerPath) {
+ 	await runDockerCmd(dockerPath, [
+ 		"pull",
+-		getEgressInterceptorImage(),
+-		"--platform",
+-		"linux/amd64"
++		getEgressInterceptorImage()
+ 	]);
+ }
+ async function pullImage(dockerPath, options, logger, isVite) {
+@@ -23260,9 +23258,7 @@ Supported external registries are currently: ${Object.values(ExternalRegistryKin
+ 	}
+ 	const pull = runDockerCmd(dockerPath, [
+ 		"pull",
+-		options.image_uri,
+-		"--platform",
+-		"linux/amd64"
++		options.image_uri
+ 	]);
+ 	return {
+ 		abort: () => {
