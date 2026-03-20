@@ -10,7 +10,7 @@ defaults:
 
 env:
   ACTIONS_RUNNER_DEBUG: true
-  NODE_OPTIONS: "--experimental-strip-types --no-warnings"
+  NODE_OPTIONS: "--no-warnings"
 
 jobs:
   check:
